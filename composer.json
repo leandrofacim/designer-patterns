@@ -1,0 +1,14 @@
+{
+    "name": "patterns/patterns",
+    "authors": [
+        {
+            "name": "Leandro Facim"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Patterns\\": "src/"
+        }
+    }
+}
