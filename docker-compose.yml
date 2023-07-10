@@ -1,6 +1,7 @@
 version: "3"
 services:
   php:
+    container_name: design_patterns
     build:
       context: .
       dockerfile: Dockerfile
