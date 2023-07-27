@@ -2,7 +2,6 @@
 
 namespace Patterns;
 
-use JsonSerializable;
 use Patterns\EstadoOrcamento\EmAprovacao;
 use Patterns\EstadoOrcamento\EstadoOrcamento;
 

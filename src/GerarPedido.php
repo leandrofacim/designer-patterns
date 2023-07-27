@@ -2,9 +2,7 @@
 
 namespace Patterns;
 
-use DateTimeImmutable;
-
-class GerarPedido implements Command
+class GerarPedido
 {
     private float $valorOrcamento;
     private int $numeroItens;
@@ -20,20 +18,27 @@ class GerarPedido implements Command
         $this->valorOrcamento = $valorOrcamento;
     }
 
-    public function execute()
+    /**
+     * Get the value of valorOrcamento
+     */ 
+    public function getValorOrcamento()
     {
-        $orcamento = new Orcamento();
-        $orcamento->quantidadeItens = $this->numeroItens;
-        $orcamento->valor =$this->valorOrcamento;
+        return $this->valorOrcamento;
+    }
 
-        $pedido = new Pedido();
-        $pedido->dataFinalizado = new DateTimeImmutable();
-        $pedido->nomeCliente = $this->nomeCliente;
-        $pedido->orcamento = $orcamento;
+    /**
+     * Get the value of numeroItens
+     */ 
+    public function getNumeroItens()
+    {
+        return $this->numeroItens;
+    }
 
-        echo "Cria pedido no banco de dados " . PHP_EOL;
-        echo "Envia e-email para cliente " . PHP_EOL;
-
-        return $pedido;
+    /**
+     * Get the value of nomeCliente
+     */ 
+    public function getNomeCliente()
+    {
+        return $this->nomeCliente;
     }
 }
